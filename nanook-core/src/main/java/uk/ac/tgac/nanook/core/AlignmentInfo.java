@@ -1,4 +1,4 @@
-package nanook;
+package uk.ac.tgac.nanook.core;
 
 /**
  * Class to hold information about an alignment.

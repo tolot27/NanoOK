@@ -1,4 +1,4 @@
-package nanook;
+package uk.ac.tgac.nanook.core;
 
 /**
  * Represents overall (as opposed to per reference) stats for Template, Complement and 2D reads.

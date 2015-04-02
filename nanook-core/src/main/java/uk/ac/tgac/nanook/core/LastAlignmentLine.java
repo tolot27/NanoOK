@@ -1,4 +1,4 @@
-package nanook;
+package uk.ac.tgac.nanook.core;
 
 /**
  * Class representing an alignment line in a LAST file.

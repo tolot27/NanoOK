@@ -1,4 +1,4 @@
-package nanook;
+package uk.ac.tgac.nanook.core;
 
 import java.io.FileWriter;
 import java.io.IOException;

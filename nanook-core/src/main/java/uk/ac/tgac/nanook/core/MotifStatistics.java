@@ -1,11 +1,10 @@
-package nanook;
+package uk.ac.tgac.nanook.core;
 
 import java.util.ArrayList;
-import java.util.Hashtable;
 import java.util.Map;
-import static nanook.NanoOKOptions.TYPE_2D;
-import static nanook.NanoOKOptions.TYPE_COMPLEMENT;
-import static nanook.NanoOKOptions.TYPE_TEMPLATE;
+import static uk.ac.tgac.nanook.core.NanoOKOptions.TYPE_2D;
+import static uk.ac.tgac.nanook.core.NanoOKOptions.TYPE_COMPLEMENT;
+import static uk.ac.tgac.nanook.core.NanoOKOptions.TYPE_TEMPLATE;
 
 /**
  * Store all motif statistics (ie, insertion, deletion, substitution) at a range

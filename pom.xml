@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>uk.ac.tgac.nanook</groupId>
+  <artifactId>nanook</artifactId>
+  <packaging>pom</packaging>
+  <version>0.1</version>
+  <name>NanoOK nanopore analysis tools</name>
+  <url>http://www.tgac.ac.uk/nanook</url>
+
+  <!-- Reporting/Documentation output -->
+  <reporting>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <version>2.9</version>
+        <configuration>
+          <stylesheetfile>${basedir}/src/main/javadoc/stylesheet.css</stylesheetfile>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-project-info-reports-plugin</artifactId>
+        <version>2.2</version>
+        <reportSets>
+          <reportSet>
+            <reports>
+              <!-- <report>dependencies</report> -->
+              <report>project-team</report>
+              <report>mailing-list</report>
+              <report>cim</report>
+              <report>issue-tracking</report>
+              <report>license</report>
+              <report>scm</report>
+              <report>index</report>
+            </reports>
+          </reportSet>
+        </reportSets>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-release-plugin</artifactId>
+        <version>2.1</version>
+        <configuration>
+          <preparationGoals>clean verify install</preparationGoals>
+        </configuration>
+      </plugin>
+    </plugins>
+  </reporting>
+
+  <!-- Licensing -->
+  <licenses>
+    <license>
+      <name>GNU Lesser General Public License</name>
+      <url>http://www.gnu.org/copyleft/lesser.html</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+
+  <!-- Bug Tracker -->
+  <issueManagement>
+    <system>jira</system>
+    <url>http://tracker.tgac.ac.uk/browse/NANOOK</url>
+  </issueManagement>
+
+  <!-- Developer Listing -->
+  <developers>
+    <developer>
+      <id>leggettr</id>
+      <name>Richard Leggett</name>
+      <email>richard.leggett@tgac.ac.uk</email>
+      <organization>TGAC</organization>
+      <organizationUrl>http://www.tgac.ac.uk/bioinformatics/sequence-informatics/</organizationUrl>
+      <roles>
+        <role>administrator</role>
+        <role>Developer</role>
+      </roles>
+      <timezone>0</timezone>
+      <properties/>
+    </developer>
+
+    <developer>
+      <id>davey</id>
+      <name>Rob Davey</name>
+      <email>robert.davey@tgac.ac.uk</email>
+      <organization>TGAC</organization>
+      <organizationUrl>http://www.tgac.ac.uk/bioinformatics/sequencing-informatics/</organizationUrl>
+      <roles>
+        <role>administrator</role>
+        <role>Developer</role>
+      </roles>
+      <timezone>0</timezone>
+      <properties/>
+    </developer>
+  </developers>
+
+  <!-- SVN connection -->
+  <scm>
+    <connection>
+      scm:git:https://www.github.com/TGAC/NanoOK
+    </connection>
+    <developerConnection>
+      scm:git:ssh://www.github.com/TGAC/NanoOK
+    </developerConnection>
+    <url>
+      https://www.github.com/TGAC/NanoOK
+    </url>
+  </scm>
+
+  <!-- Maven repository deploy -->
+  <distributionManagement>
+    <downloadUrl>https://repos.tgac.ac.uk/maven/repo</downloadUrl>
+    <repository>
+      <id>nanook-releases</id>
+      <name>NanoOK repository</name>
+      <url>scp://repos.tgac.ac.uk/storage/html/maven/nanook/releases</url>
+    </repository>
+    <snapshotRepository>
+      <id>nanook-snapshots</id>
+      <name>NanoOK snapshot repository</name>
+      <url>scp://repos.tgac.ac.uk/storage/html/maven/nanook/snapshots</url>
+    </snapshotRepository>
+  </distributionManagement>
+
+  <!-- Maven repository download -->
+  <repositories>
+    <repository>
+      <id>hasbanana-repo</id>
+      <name>hasbanana Maven Repository</name>
+      <url>http://www.hasbanana.com/maven/repo</url>
+    </repository>
+
+    <repository>
+      <id>tgac-repo</id>
+      <name>TGAC Maven Repository</name>
+      <url>https://repos.tgac.ac.uk/maven/repo</url>
+      <releases>
+        <enabled>true</enabled>
+        <updatePolicy>always</updatePolicy>
+      </releases>
+      <snapshots>
+        <enabled>true</enabled>
+        <updatePolicy>always</updatePolicy>
+      </snapshots>
+    </repository>
+
+    <repository>
+      <id>tgac-snapshots-repo</id>
+      <name>TGAC Maven Snapshots Repository</name>
+      <url>https://repos.tgac.ac.uk/maven/miso/snapshots</url>
+      <releases>
+        <enabled>false</enabled>
+        <updatePolicy>always</updatePolicy>
+      </releases>
+      <snapshots>
+        <enabled>true</enabled>
+        <updatePolicy>always</updatePolicy>
+      </snapshots>
+    </repository>
+
+    <repository>
+      <id>tgac-releases-repo</id>
+      <name>TGAC Maven Releases Repository</name>
+      <url>https://repos.tgac.ac.uk/maven/miso/releases</url>
+      <releases>
+        <enabled>true</enabled>
+        <updatePolicy>always</updatePolicy>
+      </releases>
+      <snapshots>
+        <enabled>false</enabled>
+        <updatePolicy>always</updatePolicy>
+      </snapshots>
+    </repository>
+
+    <repository>
+      <id>Atlassian Maven Repository</id>
+      <url>https://maven.atlassian.com/public</url>
+    </repository>
+
+  </repositories>
+
+  <pluginRepositories>
+    <pluginRepository>
+      <id>nanook-releases</id>
+      <name>NanoOK repository</name>
+      <url>https://repos.tgac.ac.uk/maven/nanook/releases</url>
+      <releases>
+        <enabled>true</enabled>
+        <updatePolicy>always</updatePolicy>
+      </releases>
+    </pluginRepository>
+
+    <pluginRepository>
+      <id>nanook-snapshots</id>
+      <name>NanoOK snapshot repository</name>
+      <url>https://repos.tgac.ac.uk/maven/nanook/snapshots</url>
+      <snapshots>
+        <enabled>true</enabled>
+        <updatePolicy>always</updatePolicy>
+      </snapshots>
+    </pluginRepository>
+
+    <pluginRepository>
+      <id>apache-snapshots</id>
+      <name>apache snapshots repository</name>
+      <url>http://repository.apache.org/snapshots</url>
+      <snapshots>
+        <updatePolicy>never</updatePolicy>
+      </snapshots>
+    </pluginRepository>
+
+    <pluginRepository>
+      <id>Atlassian Maven Repository</id>
+      <url>https://maven.atlassian.com/public</url>
+    </pluginRepository>
+
+  </pluginRepositories>
+
+  <!-- Required Build Plugins -->
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <source>1.7</source>
+          <target>1.7</target>
+          <encoding>${project.build.sourceEncoding}</encoding>
+        </configuration>
+      </plugin>
+
+      <plugin>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>2.5</version>
+        <configuration>
+          <includes>
+            <include>**/*Suite.java</include>
+          </includes>
+        </configuration>
+      </plugin>
+
+      <plugin>
+        <groupId>com.atlassian.maven.plugins</groupId>
+        <artifactId>maven-clover2-plugin</artifactId>
+        <version>3.1.2</version>
+        <configuration>
+          <licenseLocation>clover.license</licenseLocation>
+        </configuration>
+      </plugin>
+      
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <version>2.9</version>
+        <configuration>
+          <stylesheetfile>${basedir}/src/main/javadoc/stylesheet.css</stylesheetfile>
+        </configuration>
+      </plugin>      
+    </plugins>
+
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-site-plugin</artifactId>
+          <version>2.1.1</version>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.5</version>
+      <scope>test</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-api</artifactId>
+      <version>1.6.1</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-log4j12</artifactId>
+      <version>1.6.0</version>
+    </dependency>
+  </dependencies>
+
+  <modules>
+    <module>nanook-core</module>
+  </modules>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+</project>

@@ -1,4 +1,4 @@
-package nanook;
+package uk.ac.tgac.nanook.core;
 
 import java.util.ArrayList;
 import java.util.Set;
@@ -82,7 +82,7 @@ public class NanoOK {
             ReadLengthsSummaryFile summary = new ReadLengthsSummaryFile(options.getLengthSummaryFilename());
             summary.open(options.getSample());
             for (int type = 0; type<3; type++) {
-                AlignmentFileParser parser = new LastParser(type, options, overallStats.getStatsByType(type), references);
+                AlignmentParserInterface parser = new LastParser(type, options, overallStats.getStatsByType(type), references);
                 ReadSet readSet = new ReadSet(type, options, references, parser, overallStats.getStatsByType(type));
                 readSet.gatherLengthStats();
                 readSet.parseAlignmentFiles();

@@ -1,4 +1,4 @@
-package nanook;
+package uk.ac.tgac.nanook.core;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -9,7 +9,7 @@ import java.util.Collections;
  * 
  * @author Richard Leggett
  */
-public class LastParser extends AlignmentFileParser {
+public class LastParser implements AlignmentParserInterface {
     private NanoOKOptions options;
     private ReadSetStats overallStats;
     private References references;

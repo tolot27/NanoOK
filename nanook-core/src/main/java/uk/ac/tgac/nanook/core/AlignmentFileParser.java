@@ -1,4 +1,4 @@
-package nanook;
+package uk.ac.tgac.nanook.core;
 
 /**
  * Abstract class used for parsers of alignment files.

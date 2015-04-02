@@ -1,4 +1,4 @@
-package nanook;
+package uk.ac.tgac.nanook.core;
 
 import java.io.BufferedReader;
 import java.io.*;
@@ -11,7 +11,7 @@ import java.util.*;
  */
 public class ReadSet {
     private NanoOKOptions options;
-    private AlignmentFileParser parser;
+    private AlignmentParserInterface parser;
     private ReadSetStats stats;
     private References references;
     private int type;
@@ -26,7 +26,7 @@ public class ReadSet {
      * @param p an alignment parser object
      * @param s set of stats to associate with this read set
      */
-    public ReadSet(int t, NanoOKOptions o, References r, AlignmentFileParser p, ReadSetStats s) {
+    public ReadSet(int t, NanoOKOptions o, References r, AlignmentParserInterface p, ReadSetStats s) {
         options = o;
         parser = p;
         references = r;
