@@ -1,5 +1,7 @@
 package uk.ac.tgac.nanook.core;
 
+import net.sourceforge.fluxion.spi.ServiceProvider;
+
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -10,6 +12,7 @@ import java.util.List;
  * 
  * @author Richard Leggett
  */
+@ServiceProvider
 public class LastParser implements AlignmentParserInterface {
     private NanoOKOptions options;
     private ReadSetStats overallStats;

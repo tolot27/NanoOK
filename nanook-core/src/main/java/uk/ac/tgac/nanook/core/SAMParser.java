@@ -4,12 +4,11 @@
  */
 package uk.ac.tgac.nanook.core;
 
+import net.sourceforge.fluxion.spi.ServiceProvider;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Hashtable;
@@ -21,6 +20,7 @@ import java.util.regex.Pattern;
  *
  * @author leggettr
  */
+@ServiceProvider
 public class SAMParser implements AlignmentParserInterface {
     private NanoOKOptions options;
     private ReadSetStats overallStats;
