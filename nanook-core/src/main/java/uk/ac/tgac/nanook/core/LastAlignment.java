@@ -1,7 +1,5 @@
 package uk.ac.tgac.nanook.core;
 
-import java.util.ArrayList;
-
 /**
  * Represent a LastAlignment involving a query and a hit.
  * @author leggettr
