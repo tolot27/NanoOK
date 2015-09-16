@@ -121,7 +121,10 @@ public class ReadAligner {
         checkAndMakeDir(logDirName);
         
         for (int t=0; t<3; t++) {
-            String inputDirName = readsDir + File.separator + NanoOKOptions.getTypeFromInt(t);
+        	if (!options.isProcessingReadType(t)) {
+        		continue;
+        	}
+        	String inputDirName = readsDir + File.separator + NanoOKOptions.getTypeFromInt(t);
             String outputDirName = alignDir + File.separator + NanoOKOptions.getTypeFromInt(t);
             
             checkAndMakeDir(outputDirName);

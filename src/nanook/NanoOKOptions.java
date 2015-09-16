@@ -118,6 +118,7 @@ public class NanoOKOptions implements Serializable {
             System.out.println("    -aligner <name> specifies the aligner (default last)"); 
             System.out.println("    -alignerparams <params> specifies paramters to the aligner");
             System.out.println("    -showaligns echoes aligner commands to screen");
+            System.out.println("    -2donly to analyse only 2D reads"); 
             System.out.println("");
             System.out.println("'analyse' options:");
             System.out.println("    -r|-reference <path> specifies path to reference database");
